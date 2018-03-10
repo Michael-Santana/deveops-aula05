@@ -1,26 +1,21 @@
-import jogovelha
+import jogodavelha
 import sys
 
-erroinicializar = False
-jogo = jogovelha.inicializar()
+erroInicializar = False
+jogo = jogodavelha.inicializar()
 
 if len(jogo) != 3:
     erroInicializar = True
-
-    
 else:
     for linha in jogo:
         if len(linha) != 3:
-            erroinicializar = True
+            erroInicializar = True
     else:
         for elemento in linha:
             if elemento != '.':
-                erroinicializar = True
-   
+                erroInicializar = True
 
-
-
-if erroinicializar:
+if erroInicializar:
     sys.exit(1)
 else:
     sys.exit(0)
